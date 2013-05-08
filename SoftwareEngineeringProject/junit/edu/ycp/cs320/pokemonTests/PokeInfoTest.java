@@ -1,4 +1,4 @@
-package edu.ycp.cs320.fokemonTests;
+package edu.ycp.cs320.pokemonTests;
 
 import java.util.ArrayList;
 

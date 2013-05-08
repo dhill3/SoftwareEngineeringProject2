@@ -57,9 +57,6 @@ public class Login  implements Serializable {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-
-
 	
 }
 

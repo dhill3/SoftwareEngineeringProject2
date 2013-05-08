@@ -1,4 +1,4 @@
-package edu.ycp.cs320.fokemonTests;
+package edu.ycp.cs320.pokemonTests;
 
 import org.junit.Before;
 import edu.ycp.cs320.fokemon_webApp.shared.PokemonClasses.Pokemon;
