@@ -1,4 +1,4 @@
-package edu.ycp.cs320.SoftwareEngineeringProject;
+package edu.ycp.cs320.playerTests;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import edu.ycp.cs320.fokemon_webApp.shared.Player.Location;
 
-public class TestLocation {
+public class LocationTest {
 	private Location pos1;
 	private Location pos2;
 	private Location pos3;
