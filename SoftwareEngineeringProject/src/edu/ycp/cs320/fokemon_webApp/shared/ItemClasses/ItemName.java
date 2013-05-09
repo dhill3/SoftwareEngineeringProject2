@@ -1,5 +1,11 @@
 package edu.ycp.cs320.fokemon_webApp.shared.ItemClasses;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import edu.ycp.cs320.fokemon_webApp.shared.PokemonClasses.PokeID;
+
 public enum ItemName {
 	FRESH_WATER("Fresh Water"), SODA_POP("Soda Pop"), LEMONADE("Lemonade"), ETHER(
 			"Ether"), MAX_ETHER("Max Ether"), ELIXIR("Elixir"), MAX_ELIXIR(
@@ -19,4 +25,8 @@ public enum ItemName {
 	private ItemName(String itemName) {
 		this.name = itemName;
 	}
+	
+	private static final List<ItemName> ITEMS = Collections
+			.unmodifiableList(Arrays.asList(values()));
+
 }

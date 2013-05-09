@@ -84,4 +84,68 @@ public class ItemTest {
 		assertEquals(EffectType.RECOVERCONST, freshWater.getItemEffect().get(0).getEffectIndex());
 		assertEquals(EffectType.RECOVERFULL, maxRevive.getItemEffect().get(0).getEffectIndex());
 	}
+	
+	@Test
+	public void testSetSellPrice()	{
+		freshWater.setSellPrice(15164);
+		assertEquals(15164, freshWater.getSellPrice());
+		ultraBall.setSellPrice(8868);
+		assertEquals(8868, ultraBall.getSellPrice());
+	}
+
+	@Test
+	public void testSetBuyPrice()	{
+		freshWater.setBuyPrice(69);
+		assertEquals(69, freshWater.getBuyPrice());
+		ultraBall.setBuyPrice(9969);
+		assertEquals(9969, ultraBall.getBuyPrice());
+	}
+
+	@Test
+	public void testSetUseInBattle()	{
+		freshWater.setUseInBattle(false);
+		assertFalse(freshWater.isUseInBattle());
+		ultraBall.setUseInBattle(false);
+		assertFalse(ultraBall.isUseInBattle());
+	}
+
+	@Test
+	public void testSetUseOutOfBattle()	{
+		freshWater.setUseOutOfBattle(false);
+		assertFalse(freshWater.isUseOutOfBattle());
+		ultraBall.setUseOutOfBattle(false);
+		assertFalse(ultraBall.isUseOutOfBattle());
+	}
+
+	@Test
+	public void testSetItemName()	{
+		freshWater.setItemName("WUUUUTTER");
+		assertEquals("WUUUUTTER", freshWater.getItemName());
+		ultraBall.setItemName("U-Ball");
+		assertEquals("U-Ball", ultraBall.getItemName());
+	}
+
+	@Test
+	public void testSetCatchRate()	{
+		freshWater.setCatchRate(25.1);
+		assertEquals(25.1, freshWater.getCatchRate(), DELTA);
+		ultraBall.setCatchRate(85.69);
+		assertEquals(85.69, ultraBall.getCatchRate(), DELTA);
+	}
+
+	@Test
+	public void testSetQuantity()	{
+		freshWater.setQuantity(85);
+		assertEquals(85, freshWater.getQuantity());
+		ultraBall.setQuantity(50);
+		assertEquals(50, ultraBall.getQuantity());
+	}
+
+	@Test
+	public void testSetItemEffect()	{
+		freshWater.setItemEffect(testList);
+		assertEquals(EffectType.FREEZE, freshWater.getItemEffect().get(0).getEffectIndex());
+		ultraBall.setItemEffect(testList);
+		assertEquals(EffectType.FREEZE, ultraBall.getItemEffect().get(0).getEffectIndex());
+	}
 }
