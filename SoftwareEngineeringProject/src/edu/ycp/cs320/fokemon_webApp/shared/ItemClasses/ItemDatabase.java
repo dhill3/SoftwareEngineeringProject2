@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import edu.ycp.cs320.fokemon_webApp.shared.MoveClasses.Effect;
 import edu.ycp.cs320.fokemon_webApp.shared.MoveClasses.EffectType;
-import edu.ycp.cs320.fokemon_webApp.shared.PokemonClasses.Pokemon;
 
 public class ItemDatabase {
 	public static Item generateItem(ItemName itemName, int number) {
@@ -35,14 +34,13 @@ public class ItemDatabase {
 			item.setSellPrice(1500);
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(true);
-			/*for (int i = 0; i < attacker.getMoves().size(); i++) {
-				effect.setEffectIndex(EffectType.PP_UP);
-				effect.setEffectChance(100);
-				effect.setMagnitude(attacker.getMove(i).getCurPP() + 10);
 
-				itemEffect.add(0, effect);
-			}
-			item.setItemEffect(itemEffect);*/
+			effect.setEffectIndex(EffectType.PP_UP);
+			effect.setEffectChance(100);
+			effect.setMagnitude(0);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		case ENERGY_POWDER:
 			item.setQuantity(number);
@@ -79,9 +77,9 @@ public class ItemDatabase {
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(true);
 
-			effect.setEffectIndex(EffectType.RECOVERCONST);
+			effect.setEffectIndex(EffectType.PP_UP);
 			effect.setEffectChance(100);
-			effect.setMagnitude(10);
+			effect.setMagnitude(1);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -109,7 +107,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getMaxHp());
+			effect.setMagnitude(100);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -123,7 +121,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getCurHp());
+			effect.setMagnitude(0);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -176,14 +174,13 @@ public class ItemDatabase {
 			item.setSellPrice(2250);
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(true);
-			/*for (int i = 0; i < attacker.getMoves().size(); i++) {
-				effect.setEffectIndex(EffectType.PP_UP);
-				effect.setEffectChance(100);
-				effect.setMagnitude(attacker.getMove(i).getMaxPP());
 
-				itemEffect.add(0, effect);
-			}
-			item.setItemEffect(itemEffect);*/
+			effect.setEffectIndex(EffectType.PP_UP);
+			effect.setEffectChance(100);
+			effect.setMagnitude(2);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		case MAX_ETHER:
 			item.setQuantity(number);
@@ -194,7 +191,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.PP_UP);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getMove(moveIndex).getMaxPP());
+			effect.setMagnitude(3);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -208,7 +205,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getMaxHp());
+			effect.setMagnitude(100);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -222,7 +219,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getMaxHp());
+			effect.setMagnitude(100);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -250,8 +247,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.PP_UP);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getMove(moveIndex).getMaxPP() / 5
-			//		+ attacker.getMove(moveIndex).getMaxPP());
+			effect.setMagnitude(4);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -286,7 +282,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getMaxHp());
+			effect.setMagnitude(100);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -300,7 +296,7 @@ public class ItemDatabase {
 
 			effect.setEffectIndex(EffectType.RECOVERFULL);
 			effect.setEffectChance(100);
-			//effect.setMagnitude(attacker.getStats().getMaxHp() / 2);
+			effect.setMagnitude(1);
 
 			itemEffect.add(0, effect);
 			item.setItemEffect(itemEffect);
@@ -410,6 +406,9 @@ public class ItemDatabase {
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(false);
 			item.setCatchRate(1.5);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		case MASTER_BALL:
 			item.setQuantity(number);
@@ -418,6 +417,9 @@ public class ItemDatabase {
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(false);
 			item.setCatchRate(255);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		case POKE_BALL:
 			item.setQuantity(number);
@@ -426,6 +428,9 @@ public class ItemDatabase {
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(false);
 			item.setCatchRate(1);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		case ULTRA_BALL:
 			item.setQuantity(number);
@@ -434,11 +439,13 @@ public class ItemDatabase {
 			item.setUseInBattle(true);
 			item.setUseOutOfBattle(false);
 			item.setCatchRate(2);
+
+			itemEffect.add(0, effect);
+			item.setItemEffect(itemEffect);
 			break;
 		default:
 			break;
 		}
 		return item;
 	}
-
 }
